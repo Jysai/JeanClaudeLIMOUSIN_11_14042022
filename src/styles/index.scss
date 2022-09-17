@@ -1,0 +1,12 @@
+@import "./settings";
+@import "./components/navigation";
+@import "./components/logo";
+@import "./components/hosts";
+@import "./components/card";
+@import "./components/header";
+#root{
+    max-width: 1240px;
+    min-width: 450px;
+    margin: 0 auto;
+  }
+  
