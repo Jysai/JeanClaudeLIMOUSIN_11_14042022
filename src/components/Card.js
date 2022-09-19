@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Card = ({host}) => {
- 
+const Card = ({host, index}) => {
+    
+    console.log(host.id);
     return (
         <li className="card" >
             <img src={host.cover} alt={host.title} />
@@ -9,7 +10,6 @@ const Card = ({host}) => {
                 <h4>
                 {host.title}
                 </h4>
-
             </div>
         </li>
     );

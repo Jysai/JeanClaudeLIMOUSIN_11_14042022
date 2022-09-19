@@ -4,9 +4,12 @@
 @import "./components/hosts";
 @import "./components/card";
 @import "./components/header";
+@import "./components/about";
+@import "./components/dropdown";
 #root{
     max-width: 1240px;
     min-width: 450px;
     margin: 0 auto;
+    padding: 10px;
   }
   
