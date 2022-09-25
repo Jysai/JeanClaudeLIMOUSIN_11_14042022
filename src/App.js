@@ -1,19 +1,26 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes }  from "react-router-dom";
 import About from "./pages/About";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
+import Hosting from "./pages/Hosting";
 
 const App = () => {
   return (
-    <BrowserRouter>
-     <Routes>
+    <Router>
+      <Routes>
+
       <Route path="/" element={<Home />}/>
-      <Route path="/home" element={<Home />}/>
+      {/* <Route path="/home" element={<Home />}/> */}
       <Route path="/about" element={<About />}/>
-      <Route path="/*" element={<Error />}/>
+      
+      <Route path="/host/:id" element={<Hosting />}/>
+      <Route path="*" element={<Error />}/>
+      
+      
+
      </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 

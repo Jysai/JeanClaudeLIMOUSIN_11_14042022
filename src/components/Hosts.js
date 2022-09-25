@@ -1,5 +1,5 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import Data from "../data/logements.json"
 
@@ -18,8 +18,8 @@ const Hosts = () => {
       <ul>
         {Data    
         .map((host, index) => (
-         
-          <Card key={index} host={host} />
+          
+          <Card key={index} host={host}/> 
         ))}
       </ul>
     </div>

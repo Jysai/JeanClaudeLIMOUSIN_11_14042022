@@ -26,13 +26,9 @@ const arrayAbout = [
 
 const DetailsAbout = () => {
   return (
-    <div className="dropdown">
-      <ul>
-        {arrayAbout.map((element, index) => (
+        arrayAbout.map((element, index) => (
           <CollapseAbout key={index} element={element} />
-        ))}
-      </ul>
-    </div>
+        ))
   );
 };
 

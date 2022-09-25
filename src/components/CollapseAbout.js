@@ -8,7 +8,10 @@ const CollapseAbout = ({ element, index }) => {
   const toggleDropdown = () => setOpen(!isOpen);
 
   return (
+
+    
     <div className="dropdown-wrapper">
+      
       <div className="dropdown-header" onClick={toggleDropdown}>
         {element.title}
         <i className={`fa fa-chevron-right icon ${isOpen && "open"}`}></i>
