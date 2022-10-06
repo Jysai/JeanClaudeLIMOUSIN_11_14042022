@@ -2,7 +2,7 @@ import React from "react";
 import DetailsAbout from "../components/DetailsAbout";
 import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
-
+import Footer from '../components/Footer';
 
 
 
@@ -21,6 +21,7 @@ const About = () => {
       <div className="about-details">
       <DetailsAbout/>
       </div>
+      <Footer />
     </div>
   );
 };

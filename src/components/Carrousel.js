@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const Carrousel = ( arrayPictures ) => {
   console.log(arrayPictures);
-
   let [indexImg, setIndexImg] = useState(0);
 
   const prevPicture = () => {
@@ -19,6 +18,7 @@ const Carrousel = ( arrayPictures ) => {
     if (indexImg + 1 > arrayPictures.img.length) {
       setIndexImg(0);
     }
+    
   };
 
   return (
@@ -31,11 +31,11 @@ const Carrousel = ( arrayPictures ) => {
       
       <div className="carrousel-options">
         <div className="carrousel-prev" onClick={prevPicture}>
-          {<i className="fa-solid fa-chevron-left"></i>}
+          {<i className="fa-solid fa-chevron-left carrousel-chevron-prev"></i>}
         </div>
 
         <div className="carrousel-next" onClick={nextPicture}>
-          {<i className="fa-solid fa-chevron-right"></i>}
+          {<i className="fa-solid fa-chevron-right carrousel-chevron-next"></i>}
         </div>
       </div>
     </div>

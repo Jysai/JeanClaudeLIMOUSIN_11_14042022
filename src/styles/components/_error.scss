@@ -1,0 +1,31 @@
+.wrap-error-404{
+    display: flex;
+    /* justify-content: space-around; */
+    /* align-items: self-end; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+}
+
+.error-404{
+
+
+    font-weight: 700;
+    font-size: 288px;
+}
+
+.message-404{
+    font-weight: 500;
+font-size: 36px;
+line-height: 142.6%;
+}
+
+.home-404{
+    font-weight: 500;
+font-size: 18px;
+line-height: 142.6%;
+
+
+text-decoration-line: underline;
+}

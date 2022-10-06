@@ -16,8 +16,7 @@ const App = () => {
       
       <Route path="/host/:id" element={<Hosting />}/>
       <Route path="*" element={<Error />}/>
-      
-      
+      <Route path="/404" element={<Error />}/>
 
      </Routes>
     </Router>

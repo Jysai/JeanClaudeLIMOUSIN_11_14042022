@@ -1,6 +1,10 @@
 import React from "react";
 
-const CollapseAbout = ({ element, index }) => {
+const Collapse = ( arrayHost ) => {
+  
+
+   
+
   const { useState } = React;
 
   const [isOpen, setOpen] = useState(false);
@@ -9,20 +13,22 @@ const CollapseAbout = ({ element, index }) => {
 
   return (
 
-    
-    <div className="dropdown-wrapper">
+    <div className="dropdown-wrapper-hosting">
       
       <div className="dropdown-header" onClick={toggleDropdown}>
-        {element.title}
-        <i className={`fa fa-chevron-right icon-collapse ${isOpen && "open"}`}></i>
+      <h4>{arrayHost.title}</h4>
+      <i className={`fa fa-chevron-right icon-collapse ${isOpen && "open"}`}></i>
       </div>
       <div className={`dropdown-body ${isOpen && "open"}`}>
         <div className="dropdown-item">
-          <span>{element.description}</span>
+        <span>{arrayHost.children.props.children}</span>
+
+
+        
         </div>
       </div>
     </div>
   );
 };
 
-export default CollapseAbout;
+export default Collapse;

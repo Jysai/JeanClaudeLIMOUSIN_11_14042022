@@ -1,0 +1,21 @@
+.footer-bg {
+
+    @include verticalCenter;
+    background: black;
+    margin-top: 20px;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      
+      color: #FFFFFF
+    }
+
+    .copyright-footer{
+        margin-top: 15px;
+        color: #FFFFFF
+    }
+  }
+  

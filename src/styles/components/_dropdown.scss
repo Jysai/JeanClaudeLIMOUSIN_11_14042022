@@ -63,13 +63,22 @@
     opacity: 1;
   }
   
-  .icon {
-    font-size: 13px;
-    color: #91A5BE;
-    transform: rotate(0deg);
+  .icon-collapse {
+    font-size: 18px;
+    color: white;
+    transform: rotate(-90deg);
     transition: all .2s ease-in-out;
   }
   
-  .icon.open {
+  .icon-collapse.open {
     transform: rotate(90deg);
   }
+  .collapse-hosting{
+  display: flex;
+    justify-content: space-between;
+  }
+
+  .dropdown-wrapper-hosting{
+    width: 48%;
+  }
+
