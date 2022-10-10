@@ -39,8 +39,8 @@ const Hosting = () => {
           <span>{location.location}</span>
         </div>
         <div>
-          {/* <span>{location.host.name}</span>
-        */}
+          {/* <span>{location.host.name}</span> */}
+       
         </div>
       </div>
       <div>
@@ -52,19 +52,13 @@ const Hosting = () => {
       </div>
 
       <div className="collapse-hosting">
-        <Collaspe title="Description">
-          <p>{location.description}</p>
-        </Collaspe>
+        <Collaspe title="Description" description={location.description}/>
 
-        <Collaspe title="Equipements">
-          {/* <ul>
-          {location.equipments.map(equipment => (
-                <li key={equipment}>{equipment}</li>
-              ))}
-              </ul> */}
+   
 
-          <p>{location.equipments}</p>
-        </Collaspe>
+        <Collaspe title="Equipements" equipments={location.equipments }/>
+    
+
       </div>
       <Footer />
     </div>

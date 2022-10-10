@@ -1,24 +1,28 @@
 import { useState } from "react";
 
-const Carrousel = ( arrayPictures ) => {
-  console.log(arrayPictures);
+const Carrousel = (arrayPictures) => {
   let [indexImg, setIndexImg] = useState(0);
 
+  console.log(arrayPictures.img);
+
   const prevPicture = () => {
-    setIndexImg((indexImg = indexImg - 1));
-        
-    if (indexImg < 0) {
-      setIndexImg(arrayPictures.img.length - 1);
+    if (arrayPictures.img.length !== 1) {
+      setIndexImg((indexImg = indexImg - 1));
+
+      if (indexImg < 0) {
+        setIndexImg(arrayPictures.img.length - 1);
+      }
     }
   };
 
   const nextPicture = () => {
-    setIndexImg((indexImg = indexImg + 1));
+    if (arrayPictures.img.length !== 1) {
+      setIndexImg((indexImg = indexImg + 1));
 
-    if (indexImg + 1 > arrayPictures.img.length) {
-      setIndexImg(0);
+      if (indexImg + 1 > arrayPictures.img.length) {
+        setIndexImg(0);
+      }
     }
-    
   };
 
   return (
@@ -28,7 +32,7 @@ const Carrousel = ( arrayPictures ) => {
         src={arrayPictures.img && arrayPictures.img[indexImg]}
         alt="hosting-gallery-image"
       />
-      
+
       <div className="carrousel-options">
         <div className="carrousel-prev" onClick={prevPicture}>
           {<i className="fa-solid fa-chevron-left carrousel-chevron-prev"></i>}
@@ -40,6 +44,6 @@ const Carrousel = ( arrayPictures ) => {
       </div>
     </div>
   );
-}
+};
 
 export default Carrousel;
