@@ -3,7 +3,6 @@ import { useState } from "react";
 const Carrousel = (arrayPictures) => {
   let [indexImg, setIndexImg] = useState(0);
 
-  console.log(arrayPictures.img);
 
   const prevPicture = () => {
     if (arrayPictures.img.length !== 1) {

@@ -7,6 +7,8 @@ import Carrousel from "../components/Carrousel";
 import Data from "../data/logements.json";
 import Collaspe from "../components/Collapse";
 import Footer from "../components/Footer";
+import Tags from "../components/Tags";
+import Rating from "../components/Rating";
 
 const Hosting = () => {
   const [location, setLocation] = useState({});
@@ -33,32 +35,25 @@ const Hosting = () => {
       </div>
       <Carrousel img={location.pictures} />
 
-      <div>
+      <div className="host-title-and-name">
         <div>
           <h2>{location.title}</h2>
           <span>{location.location}</span>
         </div>
-        <div>
-          {/* <span>{location.host.name}</span> */}
-       
+        <div className="host-name-and-profil-picture">
+          <span className="host-name">{location.host?.name}</span>
+          <img src={location.host?.picture} alt="photo de profil" className="host-profil-picture"/>
         </div>
       </div>
-      <div>
-        {/* <ul>
-          {location.tags.map((element) => (
-            <li key={tags}>{element}</li>
-          ))}
-        </ul> */}
+      <div className="tags-and-rating">
+        <Tags tags={location.tags} />
+        <Rating rating={location.rating} />
       </div>
 
       <div className="collapse-hosting">
-        <Collaspe title="Description" description={location.description}/>
+        <Collaspe title="Description" description={location.description} />
 
-   
-
-        <Collaspe title="Equipements" equipments={location.equipments }/>
-    
-
+        <Collaspe title="Equipements" equipments={location.equipments} />
       </div>
       <Footer />
     </div>

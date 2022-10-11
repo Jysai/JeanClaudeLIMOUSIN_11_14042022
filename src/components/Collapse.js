@@ -3,7 +3,7 @@ import React from "react";
 const Collapse = (arrayHost) => {
   const { useState } = React;
 
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
 
   const toggleDropdown = () => setOpen(!isOpen);
 

@@ -18,3 +18,64 @@ h2{
 font-size: 36px;
 line-height: 142.6%;
 }
+.host-title-and-name{
+  display: flex;
+  justify-content: space-between;
+}
+.host-name-and-profil-picture{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.host-name {
+  display: flex;
+
+  justify-content: flex-end;
+  width: 0px;
+  margin-right: 15px;
+}
+.host-profil-picture{
+  
+  display: flex;
+
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+
+
+}
+.tag-wrapper{
+  display:flex;
+  flex-wrap: wrap;
+
+}
+.tags-hosting{
+  background: #FF6060;
+border-radius: 10px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+height:25px;
+color: white;
+margin-right: 15px;
+font-weight:500;
+font-size: 14px;
+padding: 0 15px;
+margin-top: 15px
+}
+.tags-and-rating{
+  display: flex;
+  justify-content: space-between;
+}
+.rating-wrapper{
+  width: 196px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.star-solid{
+  height: 30px;
+}
+.star-empty{
+  height: 30px;
+}
