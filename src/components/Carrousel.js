@@ -3,6 +3,11 @@ import { useState } from "react";
 const Carrousel = (arrayPictures) => {
   let [indexImg, setIndexImg] = useState(0);
 
+  const arrayPicturesLength = () => {
+    if (arrayPictures.img !== undefined) {
+      return arrayPictures.img.length == 1;
+    }
+  };
 
   const prevPicture = () => {
     if (arrayPictures.img.length !== 1) {
@@ -31,16 +36,19 @@ const Carrousel = (arrayPictures) => {
         src={arrayPictures.img && arrayPictures.img[indexImg]}
         alt="hosting-gallery-image"
       />
+      {arrayPicturesLength() == false ? (
+        <div className="carrousel-options">
+          <div className="carrousel-prev" onClick={prevPicture}>
+            <i className="fa-solid fa-chevron-left carrousel-chevron-prev"></i>
+          </div>
 
-      <div className="carrousel-options">
-        <div className="carrousel-prev" onClick={prevPicture}>
-          {<i className="fa-solid fa-chevron-left carrousel-chevron-prev"></i>}
+          <div className="carrousel-next" onClick={nextPicture}>
+            <i className="fa-solid fa-chevron-right carrousel-chevron-next"></i>
+          </div>
         </div>
-
-        <div className="carrousel-next" onClick={nextPicture}>
-          {<i className="fa-solid fa-chevron-right carrousel-chevron-next"></i>}
-        </div>
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
 import Carrousel from "../components/Carrousel";
 import Data from "../data/logements.json";
-import Collaspe from "../components/Collapse";
+import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import Tags from "../components/Tags";
 import Rating from "../components/Rating";
@@ -27,6 +27,15 @@ const Hosting = () => {
     }
   }, [id, navigate]);
 
+  const arrayHostEquipments = () => {
+    if (location.equipments !== undefined) {
+
+      return location.equipments.map((element, index) => (
+        <li key={index}>{element}</li>
+      ));
+    }
+  };
+
   return (
     <div>
       <div className="nav-header">
@@ -42,7 +51,11 @@ const Hosting = () => {
         </div>
         <div className="host-name-and-profil-picture">
           <span className="host-name">{location.host?.name}</span>
-          <img src={location.host?.picture} alt="photo de profil" className="host-profil-picture"/>
+          <img
+            src={location.host?.picture}
+            alt="photo de profil"
+            className="host-profil-picture"
+          />
         </div>
       </div>
       <div className="tags-and-rating">
@@ -51,9 +64,13 @@ const Hosting = () => {
       </div>
 
       <div className="collapse-hosting">
-        <Collaspe title="Description" description={location.description} />
+        <Collapse title="Description" description={location.description}>
+          {location.description}
+        </Collapse>
 
-        <Collaspe title="Equipements" equipments={location.equipments} />
+        <Collapse title="Equipements" equipments={arrayHostEquipments()}>
+          <ul> {arrayHostEquipments()}</ul>
+        </Collapse>
       </div>
       <Footer />
     </div>
