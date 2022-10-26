@@ -18,20 +18,34 @@ h2{
 font-size: 36px;
 line-height: 142.6%;
 }
-.host-title-and-name{
+
+.host-informations-wrap{
+  display: flex;
+    justify-content: space-between;
+}
+.host-title-location-tags{
   display: flex;
   justify-content: space-between;
 }
-.host-name-and-profil-picture{
+
+.host-name-profil-picture-rating{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.host-name-profil-picture{
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .host-name {
-  display: flex;
-
-  justify-content: flex-end;
-  width: 0px;
+  width: min-intrinsic;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  display: table-caption;
+  display: -ms-grid;
+  -ms-grid-columns: min-content;
   margin-right: 15px;
 }
 .host-profil-picture{
@@ -68,14 +82,63 @@ margin-top: 15px
   justify-content: space-between;
 }
 .rating-wrapper{
-  width: 196px;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .star-solid{
   height: 30px;
+  padding: 2px;
 }
 .star-empty{
   height: 30px;
+  padding: 2px;
 }
+.collapse-wrap-hosting{
+  width: 580px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .title-host{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+
+
+    display: flex;
+    align-items: flex-end;
+  }
+  .host-informations-wrap{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .location-host{
+    font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 142.6%;
+/* identical to box height, or 26px */
+
+display: flex;
+align-items: flex-end;
+  }
+
+  .collapse-wrap-hosting{
+    width: 100%;
+  }
+
+  .host-name-profil-picture-rating{
+    flex-direction: row-reverse;
+  }
+  .host-name-profil-picture{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+}
+

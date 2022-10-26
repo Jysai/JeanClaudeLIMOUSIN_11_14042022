@@ -29,7 +29,6 @@ const Hosting = () => {
 
   const arrayHostEquipments = () => {
     if (location.equipments !== undefined) {
-
       return location.equipments.map((element, index) => (
         <li key={index}>{element}</li>
       ));
@@ -43,13 +42,17 @@ const Hosting = () => {
         <Navigation />
       </div>
       <Carrousel img={location.pictures} />
-
-      <div className="host-title-and-name">
+      <div className="host-informations-wrap">
+      <div className="host-title-location-tags">
         <div>
-          <h2>{location.title}</h2>
-          <span>{location.location}</span>
+          <h2 className="title-host">{location.title}</h2>
+          <span className="location-host">{location.location}</span>
+          <Tags tags={location.tags} />
         </div>
-        <div className="host-name-and-profil-picture">
+      </div>
+      <div className="host-name-profil-picture-rating">
+       
+        <div className="host-name-profil-picture">
           <span className="host-name">{location.host?.name}</span>
           <img
             src={location.host?.picture}
@@ -57,20 +60,22 @@ const Hosting = () => {
             className="host-profil-picture"
           />
         </div>
+        <div className="tags-and-rating">
+          <Rating rating={location.rating} />
+        </div>
       </div>
-      <div className="tags-and-rating">
-        <Tags tags={location.tags} />
-        <Rating rating={location.rating} />
       </div>
-
       <div className="collapse-hosting">
-        <Collapse title="Description" description={location.description}>
-          {location.description}
-        </Collapse>
-
-        <Collapse title="Equipements" equipments={arrayHostEquipments()}>
-          <ul> {arrayHostEquipments()}</ul>
-        </Collapse>
+        <div className="collapse-wrap-hosting">
+          <Collapse title="Description" description={location.description}>
+            {location.description}
+          </Collapse>
+        </div>
+        <div className="collapse-wrap-hosting">
+          <Collapse title="Equipements" equipments={arrayHostEquipments()}>
+            <ul> {arrayHostEquipments()}</ul>
+          </Collapse>
+        </div>
       </div>
       <Footer />
     </div>

@@ -76,14 +76,14 @@
   .collapse-hosting{
 
   display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 25px;
 
   }
 
   .dropdown-wrapper-hosting{
     width: 100%;
-    min-width: 425px;
+   
   }
 
   @media screen and (max-width: 800px) {
@@ -91,5 +91,20 @@
       display: flex;
       flex-direction: column;
     }
+
+    h4{
+      font-size: 13px;
+    }
+
+
+    span{    weight:
+      400;
+      size:
+      12px;
+      line-height:
+      17.11px}
+
+
+
   }
 

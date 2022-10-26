@@ -1,6 +1,6 @@
 @import "./settings";
 @import "./components/navigation";
-@import "./components/logo";
+
 @import "./components/hosts";
 @import "./components/card";
 @import "./components/header";
@@ -10,9 +10,19 @@
 @import "./components/footer";
 @import "./components/error";
 #root{
-    max-width: 1240px;
-    min-width: 450px;
     margin: 0 auto;
     padding: 10px;
+    max-width: 1250px;
+    min-width: 390px;
   }
   
+  @media screen and (max-width: 800px) {
+    #root{
+     width: 100%;
+    } 
+
+    .header-img{
+      height: 111px;
+      object-fit: cover;
+    }
+  }

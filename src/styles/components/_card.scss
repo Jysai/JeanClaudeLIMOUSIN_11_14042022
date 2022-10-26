@@ -36,3 +36,19 @@
     
   }
 }
+
+@media screen and (max-width: 800px) {
+  .card {
+    height: 255px;
+    img {
+      
+      height: 255px;
+      object-fit: cover;
+    
+      
+    }
+  }
+
+
+
+}
