@@ -12,7 +12,7 @@ const About = () => {
         <Navigation />
       </div>
 
-      <div className="about-img"></div>
+      <div className="about-img" alt="image du header de la page about"></div>
       <div className="about-details">
         <Collapse title="Fiabilité">
           Les annonces postées sur Kasa garantissent une fiabilité totale. Les

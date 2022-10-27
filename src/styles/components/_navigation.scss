@@ -11,6 +11,11 @@
   
 }
 
+.nav-active{
+  border-bottom: 1px solid $color-2;
+
+}
+
 .navigation {
   ul {
     display: flex;
@@ -18,7 +23,7 @@
 
     a {
       text-decoration: none;
-      padding: 10px;
+      margin: 10px;
 
       li {
         color: $color-1;

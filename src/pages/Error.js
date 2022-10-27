@@ -12,8 +12,10 @@ const Error = () => {
         <Navigation />
       </div>
       <div className="wrap-error-404">
+        <div className="error-and-message404">
         <span className="error-404">404</span>
         <span className="message-404">Oups! La page que vous demandez n'existe pas.</span>
+        </div>
         <Link to={`/`}>
     <span className="home-404">Retourner sur la page d’accueil</span>
     </Link>

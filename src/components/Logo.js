@@ -5,7 +5,7 @@ import logo from '../assets/img/logo.png'
 const Logo = () => {
     return (
         <div className='logo'>
-           <img src={logo} alt="logo react" className='logo-img' />    
+           <img src={logo} alt="logo Kasa" className='logo-img' />    
         </div>
     );
 };
