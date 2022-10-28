@@ -1,9 +1,10 @@
 import React from "react";
 
-const Tags = (arrayHost) => {
+const Tags = (props) => {
+  
   const liTags = () => {
-    if (arrayHost.tags !== undefined) {
-      return arrayHost.tags.map((element, index) => (
+    if (props.tags !== undefined) {
+      return props.tags.map((element, index) => (
         <li className="tags-hosting" key={index}>{element}</li>
       ));
     }

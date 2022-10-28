@@ -1,29 +1,30 @@
 import { useState } from "react";
 
-const Carrousel = (arrayPictures) => {
+const Carrousel = (props) => {
+
   let [indexImg, setIndexImg] = useState(0);
 
   const arrayPicturesLength = () => {
-    if (arrayPictures.img !== undefined) {
-      return arrayPictures.img.length == 1;
+    if (props.img !== undefined) {
+      return props.img.length == 1;
     }
   };
 
   const prevPicture = () => {
-    if (arrayPictures.img.length !== 1) {
+    if (props.img.length !== 1) {
       setIndexImg((indexImg = indexImg - 1));
 
       if (indexImg < 0) {
-        setIndexImg(arrayPictures.img.length - 1);
+        setIndexImg(props.img.length - 1);
       }
     }
   };
 
   const nextPicture = () => {
-    if (arrayPictures.img.length !== 1) {
+    if (props.img.length !== 1) {
       setIndexImg((indexImg = indexImg + 1));
 
-      if (indexImg + 1 > arrayPictures.img.length) {
+      if (indexImg + 1 > props.img.length) {
         setIndexImg(0);
       }
     }
@@ -33,7 +34,7 @@ const Carrousel = (arrayPictures) => {
     <div className="carrousel">
       <img
         className="picture"
-        src={arrayPictures.img && arrayPictures.img[indexImg]}
+        src={props.img && props.img[indexImg]}
         alt="hosting-gallery-image"
       />
       {arrayPicturesLength() == false ? (
